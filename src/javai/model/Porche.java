@@ -1,6 +1,7 @@
-package javai;
+package javai.model;
 
-public class Benz implements Car {
+public class Porche implements Car {
+	
 	private int speed;
 
 	public int getSpeed() {
@@ -11,17 +12,20 @@ public class Benz implements Car {
 		this.speed = speed;
 	}
 
+	@Override
 	public int speedUp(int km) {
 		this.speed = this.speed + km;
 		return this.speed;
 	}
 
+	@Override
 	public boolean stop() {
-		this.speed = 0;
-		return true;
+		return false;
 	}
 
+	@Override
 	public boolean isStart() {
-		return this.speed > 0;
+		return false;
 	}
+
 }
